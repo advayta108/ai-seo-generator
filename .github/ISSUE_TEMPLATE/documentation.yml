@@ -1,0 +1,32 @@
+name: Documentation Improvement
+description: Suggest README, Flowise setup, or configuration documentation changes.
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+body:
+  - type: checkboxes
+    id: docs-area
+    attributes:
+      label: Documentation Area
+      options:
+        - label: README
+        - label: Flowise setup guide
+        - label: Environment variables
+        - label: Tests or CI
+        - label: Community files
+        - label: Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Change
+    validations:
+      required: true

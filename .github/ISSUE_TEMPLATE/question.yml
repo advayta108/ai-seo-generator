@@ -1,0 +1,30 @@
+name: Question
+description: Ask for help with setup or usage.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include Node.js version, Flowise version, provider, and sanitized config if relevant.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked README and docs first.
+          required: true
+        - label: I removed secrets from my examples.
+          required: true

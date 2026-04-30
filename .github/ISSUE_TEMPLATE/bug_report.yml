@@ -1,0 +1,81 @@
+name: Bug Report
+description: Report an API, Flowise, streaming, or validation bug.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Remove secrets from all payloads and logs.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened?
+      placeholder: The endpoint returns an invalid JSON error even though Flowise returns...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Configure FLOWISE_BASE_URL=...
+        2. Send POST /api/generate-seo with...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Include sanitized SSE events or error output.
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      placeholder: "20.11.1"
+    validations:
+      required: true
+
+  - type: input
+    id: flowise-version
+    attributes:
+      label: Flowise Version
+      placeholder: "2.x"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: LLM Provider
+      options:
+        - Claude
+        - OpenAI
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed API keys, credentials, and private data.
+          required: true
+        - label: I checked existing issues first.
+          required: true

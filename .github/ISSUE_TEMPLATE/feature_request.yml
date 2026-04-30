@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest a new feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or developer problem should this solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the change you would like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Any alternatives you considered.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area
+      options:
+        - label: NestJS API
+        - label: Flowise integration
+        - label: Claude/OpenAI provider handling
+        - label: Streaming response
+        - label: Tests or CI
+        - label: Documentation

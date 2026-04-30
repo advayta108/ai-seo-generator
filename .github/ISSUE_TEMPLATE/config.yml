@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/advayta108/ai-seo-generator#readme
+    about: Read setup, run, test, and Flowise integration docs.
+  - name: Flowise Setup Notes
+    url: https://github.com/advayta108/ai-seo-generator/blob/main/docs/flowise-setup.md
+    about: Check chatflow, structured output parser, and Claude setup notes.
